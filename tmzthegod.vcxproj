@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0f77a9a8-7435-4b2b-9742-926b1a0ee48c}</ProjectGuid>
+    <RootNamespace>ImGuiAdvancedCheatMenu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>tmzthegod</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Dependencies\imgui-sfml\Debug-x64-static-config.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Dependencies\imgui-sfml\Release-x64-static-config.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\tmz\Desktop\imguidatat\dmathefinals\ImGUI-Advanced-Cheat-Menu-master\util\Direct3d;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AimAssist.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui-SFML.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\imgui-sfml\include\imgui_widgets.cpp" />
+    <ClCompile Include="ESP.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Marker.cpp" />
+    <ClCompile Include="menu\Console.cpp" />
+    <ClCompile Include="menu\imgui_custom.cpp" />
+    <ClCompile Include="menu\imgui_helper.cpp" />
+    <ClCompile Include="menu\Menu.cpp" />
+    <ClCompile Include="ModuleManager.cpp" />
+    <ClCompile Include="RCS.cpp" />
+    <ClCompile Include="Set.cpp" />
+    <ClCompile Include="SetManager.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="util\ColorH.cpp" />
+    <ClCompile Include="util\FileH.cpp" />
+    <ClCompile Include="util\MH.cpp" />
+    <ClCompile Include="util\StringH.cpp" />
+    <ClCompile Include="util\TimeH.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AimAssist.hpp" />
+    <ClInclude Include="cheatfile\aimbot.hpp" />
+    <ClInclude Include="cheatfile\cheat.hpp" />
+    <ClInclude Include="cheatfile\decrypt.hpp" />
+    <ClInclude Include="cheatfile\global.h" />
+    <ClInclude Include="cheatfile\kmbox.hpp" />
+    <ClInclude Include="cheatfile\mem.hpp" />
+    <ClInclude Include="cheatfile\offset.hpp" />
+    <ClInclude Include="cheatfile\render.hpp" />
+    <ClInclude Include="cheatfile\struct.hpp" />
+    <ClInclude Include="Config.hpp" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imconfig-SFML.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imconfig.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imgui-SFML.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imgui-SFML_export.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imgui.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imgui_internal.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\imgui-sfml\include\imstb_truetype.h" />
+    <ClInclude Include="ESP.hpp" />
+    <ClInclude Include="HUD.hpp" />
+    <ClInclude Include="Marker.hpp" />
+    <ClInclude Include="menu\Console.hpp" />
+    <ClInclude Include="menu\Fonts.hpp" />
+    <ClInclude Include="menu\imgui_custom.hpp" />
+    <ClInclude Include="menu\imgui_helper.hpp" />
+    <ClInclude Include="menu\imgui_notify.h" />
+    <ClInclude Include="menu\Menu.hpp" />
+    <ClInclude Include="Module.hpp" />
+    <ClInclude Include="ModuleManager.hpp" />
+    <ClInclude Include="RCS.hpp" />
+    <ClInclude Include="Set.hpp" />
+    <ClInclude Include="SetManager.hpp" />
+    <ClInclude Include="util\ColorH.hpp" />
+    <ClInclude Include="util\FileH.hpp" />
+    <ClInclude Include="util\MH.hpp" />
+    <ClInclude Include="util\Obf.hpp" />
+    <ClInclude Include="util\Singleton.hpp" />
+    <ClInclude Include="util\StringH.hpp" />
+    <ClInclude Include="util\TimeH.hpp" />
+    <ClInclude Include="util\Vec2H.hpp" />
+    <ClInclude Include="util\vmmdll\FileH.hpp" />
+    <ClInclude Include="util\vmmdll\leechcore.h" />
+    <ClInclude Include="util\vmmdll\vmmdll.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="util\vmmdll\dbghelp.dll" />
+    <None Include="util\vmmdll\FTD3XX.dll" />
+    <None Include="util\vmmdll\info.db" />
+    <None Include="util\vmmdll\leechcore.dll" />
+    <None Include="util\vmmdll\leechcorepyc.pyd" />
+    <None Include="util\vmmdll\leechcore_device_hvsavedstate.dll" />
+    <None Include="util\vmmdll\leechcore_device_rawtcp.dll" />
+    <None Include="util\vmmdll\symsrv.dll" />
+    <None Include="util\vmmdll\vmm.dll" />
+    <None Include="util\vmmdll\vmm.jar" />
+    <None Include="util\vmmdll\vmmpyc.pyd" />
+    <None Include="util\vmmdll\vmmyara.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="util\vmmdll\leechcore.lib" />
+    <Library Include="util\vmmdll\vmm.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
